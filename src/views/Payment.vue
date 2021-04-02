@@ -111,8 +111,9 @@
                           <div class="mt-3">
                             <v-btn
                               color="#A6CB26"
-                              class="text-none"
+                              class="text-none py-5"
                               depressed
+                              small
                               dark
                               :loading="isSelecting"
                               @click="onButtonClick"

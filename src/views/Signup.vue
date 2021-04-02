@@ -149,11 +149,15 @@
                             <v-btn color="#a6cb26" dark>Daftar</v-btn>
                           </div>
                         </v-form>
-                        <div class="">
-                          Punya akun?
-                          <router-link to="Signin">
-                            <span class="label font-weight-medium">Masuk</span>
-                          </router-link>
+                        <div class="d-flex justify-center">
+                          <div>
+                            Punya akun?
+                            <router-link to="Signin">
+                              <span class="label font-weight-medium"
+                                >Masuk</span
+                              >
+                            </router-link>
+                          </div>
                         </div>
                       </div>
                     </div>

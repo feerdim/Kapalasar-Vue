@@ -2,23 +2,25 @@
   <div>
     <navbar />
     <v-container>
-      <v-tabs vertical color="#a6cb26">
-        <v-tab>
-          <v-icon left>
-            mdi-account
-          </v-icon>
-          Profile
-        </v-tab>
-        <v-tab>
-          <v-icon left>
-            mdi-history
-          </v-icon>
-          Riwayat Transaksi
-        </v-tab>
-        <v-btn text elevation="0" tile color="red">
-          <v-icon>mdi-logout</v-icon>
-          Keluar
-        </v-btn>
+      <v-tabs class="v-tabs" vertical color="#a6cb26">
+        <div class="d-flex flex-column justify-center">
+          <v-tab>
+            <v-icon left>
+              mdi-account
+            </v-icon>
+            Profile
+          </v-tab>
+          <v-tab>
+            <v-icon left>
+              mdi-history
+            </v-icon>
+            Riwayat Transaksi
+          </v-tab>
+          <v-btn text elevation="0" tile color="red">
+            <v-icon>mdi-logout</v-icon>
+            Keluar
+          </v-btn>
+        </div>
         <v-tab-item>
           <v-card color="#fafafa" tile>
             <v-card color="#a6cb26" tile elevation="0">
@@ -32,7 +34,7 @@
               <v-row>
                 <v-col>
                   <v-form>
-                    <div class="px-16 pt-8">
+                    <div class="px-lg-16 px-sm-5 pt-8">
                       <span class="label font-weight-medium">Nama Lengkap</span>
                       <v-text-field
                         v-model="name"
@@ -246,5 +248,15 @@ export default {
 }
 .v-text-field--outlined >>> fieldset {
   border-color: #a6cb26;
+}
+.v-tabs {
+  display: show;
+}
+
+@media only screen and (max-width: 540px) {
+  .v-tabs {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

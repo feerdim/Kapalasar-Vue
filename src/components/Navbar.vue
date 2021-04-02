@@ -1,13 +1,13 @@
 <template>
   <div class="navbar">
-    <v-app-bar color="FAFAFA" flat max-height="120" height="100">
+    <v-app-bar color="FAFAFA" flat max-height="120" height="120">
       <v-row justify="center">
-        <v-col md="3" to="/">
+        <v-col sm="12" md="3" to="/">
           <div>
             <router-link to="/">
               <v-img
                 src="../assets/kapalasar-1024x250.png"
-                max-width="180"
+                width="180"
                 class="mx-auto"
               ></v-img>
             </router-link>
@@ -22,20 +22,20 @@
               dense
               color="#a6cb26"
               hide-details="auto"
-              max-width="570"
+              width="570"
               append-icon="mdi-card-search"
               ma-1
             >
             </v-text-field>
           </div>
         </v-col>
-        <v-col md="6" v-else></v-col>
-        <v-col md="3">
+        <v-col class="d-none d-sm-block" md="6" v-else></v-col>
+        <v-col sm="12" md="3">
           <div v-if="isLoggedin">
             <v-menu offset-y>
               <template v-slot:activator="{ on, attrs }">
                 <v-card
-                  max-width="210"
+                  width="210"
                   class="mx-auto"
                   color="#A6CB26"
                   v-bind="attrs"

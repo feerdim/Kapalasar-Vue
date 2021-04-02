@@ -49,11 +49,15 @@
                             <v-btn color="#a6cb26" dark>Masuk</v-btn>
                           </div>
                         </v-form>
-                        <div class="pt-5">
-                          Tidak punya akun?
-                          <router-link to="Signup">
-                            <span class="label font-weight-medium">Daftar</span>
-                          </router-link>
+                        <div class="pt-5 d-flex justify-center ">
+                          <div>
+                            Tidak punya akun?
+                            <router-link to="Signup">
+                              <span class="label font-weight-medium"
+                                >Daftar</span
+                              >
+                            </router-link>
+                          </div>
                         </div>
                       </div>
                     </div>
