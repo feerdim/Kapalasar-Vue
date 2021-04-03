@@ -64,7 +64,7 @@
             md="2"
             v-for="(product, i) in filteredProducts"
             :key="i"
-            class="ma-md-2 my-2"
+            class="ma-md-2 v-lazy  my-3"
           >
             <v-row justify="center">
               <product-card @getTotalPrice="getTotalPrice" :product="product" />
@@ -75,11 +75,11 @@
     </v-lazy>
     <!-- Compliance Cookie GDPR edited by Fauzi -->
     <client-only>
-    <cookie/>
+      <cookie />
     </client-only>
     <!-- End of Compliance Cookie GDPR edited by Fauzi -->
     <Footer />
-    <div v-if="showCart" class="cart">
+    <div v-if="showCart" class="cart" style="z-index:999">
       <v-container>
         <v-row class="pa-3">
           <div>

@@ -2,18 +2,23 @@
   <div class="navbar">
     <v-app-bar color="FAFAFA" flat max-height="120" height="120">
       <v-row justify="center">
-        <v-col sm="12" md="3" to="/">
+        <v-col md="2" lg="3" to="/">
           <div>
             <router-link to="/">
               <v-img
                 src="../assets/kapalasar-1024x250.png"
-                width="180"
-                class="mx-auto"
+                max-width="180"
+                class="mx-auto img-nav"
               ></v-img>
             </router-link>
           </div>
         </v-col>
-        <v-col md="6" class="text-center" v-if="$route.name == 'Homepage'">
+        <v-col
+          md="5"
+          lg="6"
+          class="text-center "
+          v-if="$route.name == 'Homepage'"
+        >
           <div class="align-center">
             <v-text-field
               outlined
@@ -29,35 +34,40 @@
             </v-text-field>
           </div>
         </v-col>
-        <v-col class="d-none d-sm-block" md="6" v-else></v-col>
-        <v-col sm="12" md="3">
+        <v-col class="display-none" md="6" v-else></v-col>
+        <v-col md="5" lg="3">
           <div v-if="isLoggedin">
             <v-menu offset-y>
               <template v-slot:activator="{ on, attrs }">
                 <v-card
-                  width="210"
-                  class="mx-auto"
+                  max-width="210"
+                  class="mx-auto card-profile"
                   color="#A6CB26"
                   v-bind="attrs"
                   v-on="on"
                   dark
                 >
-                  <v-list-item-avatar
-                    tile
-                    size="35"
-                    color="grey"
-                    class="mx-2"
-                  ></v-list-item-avatar>
-                  <v-card-subtitle class="d-inline px-1" dark>{{
-                    nama
-                  }}</v-card-subtitle>
-                  <v-card-actions class="d-inline pa-1">
-                    <v-btn icon small>
-                      <v-icon>
-                        mdi-chevron-down
-                      </v-icon>
-                    </v-btn>
-                  </v-card-actions>
+                  <div class="name-profile">
+                    <v-list-item-avatar
+                      tile
+                      size="35"
+                      color="grey"
+                      class="mx-2"
+                    ></v-list-item-avatar>
+                    <v-card-subtitle
+                      class="d-inline name-size v-card-subtitle  px-1"
+                      dark
+                    >
+                      <span>{{ nama }}</span></v-card-subtitle
+                    >
+                    <v-card-actions class="d-inline  pa-1">
+                      <v-btn icon small>
+                        <v-icon>
+                          mdi-chevron-down
+                        </v-icon>
+                      </v-btn>
+                    </v-card-actions>
+                  </div>
                 </v-card>
               </template>
               <v-list>
@@ -107,5 +117,24 @@ export default {
 <style>
 .mdi-card-search::before {
   color: #a6cb26;
+}
+@media only screen and (max-width: 700px) {
+  .img-nav {
+    width: 150px;
+  }
+
+  .name-profile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .display-none {
+    display: none;
+  }
+}
+@media only screen and (max-width: 966px) {
+  .nav-search {
+    width: 100px;
+  }
 }
 </style>

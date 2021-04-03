@@ -170,4 +170,10 @@ export default {
 .itemQty {
   width: 45px;
 }
+
+@media only screen and (max-width: 400px) {
+  .product.card {
+    width: 96%;
+  }
+}
 </style>
