@@ -6,6 +6,7 @@ import Payment from "../views/Payment.vue";
 import Signin from "../views/Signin.vue";
 import Signup from "../views/Signup.vue";
 import Account from "../views/Account.vue";
+import Flashsale from "../views/Flashsale.vue";
 
 Vue.use(VueRouter);
 
@@ -34,6 +35,11 @@ const routes = [
     path: "/payment",
     name: "Payment",
     component: Payment
+  },
+  {
+    path: "/flashsale",
+    name: "Flashsale",
+    component:Flashsale
   },
   {
     path: "/account",

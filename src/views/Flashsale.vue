@@ -1,51 +1,18 @@
 <template>
   <div class="home">
     <navbar />
-    <!-- Carousel -->
-    <div class="carousel d-flex justify-center align-center">
-      <splide :options="optionsCarousel">
-        <splide-slide v-for="(slide, i) in slides" :key="i">
-          <div class="rounded">
-            <v-img class="responsive" :src="slide.src" />
-          </div>
-        </splide-slide>
-      </splide>
-    </div>
-    <!-- Flash Sale -->
-    <div class="flashSale">
-      <v-container>
-        <div class="d-flex align-center mb-4">
-          <v-img
-            src="../assets/flashsale.svg"
-            height="40"
-            width="40"
-            class="flex-shrink-0 flex-grow-0"
-          ></v-img>
-          <div
-            class="d-flex flex-wrap flashsale-text"
-            style="width:100%;justify-content:space-between;cursor:pointer "
-          >
-            <span class="white--text ml-4 text-h5">Flash Sale</span>
-            <router-link style="text-decoration:none" to="/flashsale">
-              <span class="white--text ml-4 text-h5">Lihat Selengkapnya</span>
-            </router-link>
-          </div>
-        </div>
-        <div class="d-flex justify-center align-center">
-          <splide :options="optionsFlashsale">
-            <splide-slide v-for="(product, i) in flashSaleProducts" :key="i">
-              <product-card @getTotalPrice="getTotalPrice" :product="product" />
-            </splide-slide>
-          </splide>
-        </div>
-      </v-container>
-    </div>
-    <!-- Filter -->
+    <v-container class="mt-5" style="background-color:#A6CB26">
+      <div class="jumbotron text-center py-15 ">
+        <h1>Flashsale</h1>
+        <p>
+          Kapalasar.id lahir dan hadir sebagai perantara antara para pedagang di
+          pasar tradisional dengan konsumen yang ada di rumah.
+        </p>
+      </div>
+    </v-container>
+    <!-- Flashsale -->
     <div>
       <v-container>
-        <div>
-          <span class="text-h6">Filter</span>
-        </div>
         <div class="d-flex flex-wrap justify-center">
           <v-btn
             v-for="(filter, i) in filters"
@@ -110,8 +77,6 @@
 
 <script>
 // @ is an alias to /src
-import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import Navbar from "../components/Navbar.vue";
 import ProductCard from "../components/ProductCard.vue";
 import Footer from "../components/Footer.vue";
@@ -121,8 +86,6 @@ export default {
   name: "Home",
   components: {
     Navbar,
-    Splide,
-    SplideSlide,
     ProductCard,
     Footer,
     cookie
