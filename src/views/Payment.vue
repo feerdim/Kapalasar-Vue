@@ -113,7 +113,7 @@
                               color="#A6CB26"
                               class="text-none py-5"
                               depressed
-                              small
+                              x-small
                               dark
                               :loading="isSelecting"
                               @click="onButtonClick"
