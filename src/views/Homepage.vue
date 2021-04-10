@@ -1,5 +1,25 @@
 <template>
   <div class="home">
+    <!-- pop up modal -->
+    <v-row justify="center">
+      <v-dialog v-model="dialog" persistent max-width="500">
+        <v-card>
+          <v-card-title class="headline">
+            Announcement
+          </v-card-title>
+          <v-card-text
+            >Pembelian apel hari ini <strong>diskon 50% </strong>, grab it
+            fast!!!.</v-card-text
+          >
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="green darken-1" text @click="dialog = false">
+              Agree
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+    </v-row>
     <navbar />
     <!-- Carousel -->
     <div class="carousel d-flex justify-center align-center">
@@ -117,6 +137,7 @@ import ProductCard from "../components/ProductCard.vue";
 import Footer from "../components/Footer.vue";
 import { products, filters, slides } from "../dummyData/dummy.js";
 import cookie from "../components/cookie";
+
 export default {
   name: "Home",
   components: {
@@ -164,7 +185,8 @@ export default {
       notFlashsaleProducts: [],
       flashSaleProducts: [],
       filteredProducts: [],
-      current: "semua"
+      current: "semua",
+      dialog: true
     };
   },
   methods: {

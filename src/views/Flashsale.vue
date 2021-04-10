@@ -1,13 +1,11 @@
 <template>
   <div class="home">
     <navbar />
-    <v-container class="mt-5" style="background-color:#A6CB26">
-      <div class="jumbotron text-center py-15 ">
-        <h1>Flashsale</h1>
-        <p>
-          Kapalasar.id lahir dan hadir sebagai perantara antara para pedagang di
-          pasar tradisional dengan konsumen yang ada di rumah.
-        </p>
+    <v-container class="mt-5">
+      <div class="img-thumbnail">
+        <img
+          src="https://media.istockphoto.com/photos/collage-of-healthy-fresh-fruits-and-vegetables-picture-id1222004542"
+        />
       </div>
     </v-container>
     <!-- Flashsale -->
@@ -225,5 +223,13 @@ export default {
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.img-thumbnail {
+  width: 100%;
+  cursor: pointer;
+}
+.img-thumbnail img {
+  width: 100%;
+  max-height: 256px;
 }
 </style>
